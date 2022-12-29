@@ -1,0 +1,268 @@
+:root {
+    --PrimaryColor: #FF5823;
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+}
+
+.footer-image {
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: -110px;
+    position: relative;
+    margin-bottom: 5rem;
+    img {
+    max-width: 100%;
+    height: 130px;
+}
+}
+
+
+.testimonial-section {
+    padding: 80px 0 80px;
+    background-image: url("../../../src/assets/Testimonial/bg-1.jpg");
+        background-position: center;
+        background-attachment: fixed;
+        position: inherit;
+        z-index: -1;
+
+    
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.85;
+            background-color: #1f2235;
+        }
+
+    .container {
+        .secheader {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+
+            .textDiv {
+                .secTitle {
+                    color: var(--blackColor);
+                    line-height: 1.5rem;
+                    padding-bottom: .5rem;
+                }
+
+                .p {
+                    font-size: 13px;
+                    color: var(--textColor);
+                    font-weight: 500;
+                }
+            }
+
+            
+        }
+
+        .mainContent {
+            padding-bottom: 2rem;
+            gap: .5rem;
+
+            .singleDestination {
+                background: var(--whiteColor);
+                overflow: hidden;
+                border-radius: 1rem;
+                box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.45);
+
+                .destImage {
+                    height: 11.8rem;
+                    width: 100%;
+                    position: relative;
+                    overflow: hidden;
+                    object-fit: cover;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                    .overLayInfo {
+                        position: absolute;
+                        display: flex;
+                        align-items: flex-start;
+                        //padding: 1rem 1.5rem;
+                        padding: 0;
+                        justify-content: center;
+                        flex-direction: column;
+                        background: linear-gradient(rgba(0, 0, 0, 0.864), rgba(0, 0, 0, 0.759));
+                        bottom: 0;
+                        width: 100%;
+                        //height: 100%;
+                        height: 0;
+                        overflow: hidden;
+                        transition: .5s ease;
+
+                        h3 {
+                            color: var(--whiteColor);
+                        }
+
+                        p {
+                            color: var(--whiteColor);
+                            opacity: .7;
+                            font-size: 0.8rem;
+                        }
+
+                        .icon {
+                            position: absolute;
+                            right: 10px;
+                            bottom: 10px;
+                            padding: .5rem;
+                            background: var(--PrimaryColor);
+                            border-radius: 50%;
+                            font-size: 2.5rem;
+                            color: var(--whiteColor);
+                            border: 1px solid transparent;
+                            transition: .3s ease;
+
+                            &:hover {
+                                background: var(--blackColor);
+                                border: 1px solid var(--PrimaryColor);
+                                color: var(--PrimaryColor);
+                            }
+                        }
+                    }
+                }
+
+                .destFooter {
+                    padding: 1rem;
+
+                    .number {
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: var(--blackColor);
+                        position: relative;
+                        width: max-content;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            background: var(--PrimaryColor);
+                            top: 45%;
+                            right: -150%;
+                            height: 5px;
+                            width: 45px;
+                            border-radius: 1rem;
+                        }
+                    }
+
+                    .destText {
+                        justify-content: space-between;
+
+
+                        h6 {
+                            font-size: 15px;
+                            color: var(--blackColor);
+                            font-weight: 600;
+                            transform: translateY(5px);
+                        }
+
+                        .flex {
+                            font-size: 1rem;
+                            font-weight: 600;
+                            //align-items: ;
+                            white-space: nowrap;
+                            overflow-x: auto;
+                            transform: translateY(5px);
+
+                            .icon {
+                               // padding-top: .9rem;
+                                color: var(--PrimaryColor);
+                                
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    .overLayInfo {
+                        overflow: visible;
+                        padding: 1rem 1.5rem;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1025px) {
+    .testimonial-section {
+        .container {
+            .secheader {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width:1281px) {
+    .testimonial-section {
+        .container {
+            .secheader {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:961px) {
+
+    .testimonial-section {
+        //padding-top: 9rem;
+       // margin: 15px;
+
+        .container {
+            .secheader {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .mainContent {
+                display: inline-grid;
+            }
+        }
+    }
+}
+
+@media (min-width:641px) {
+    .testimonial-section {
+        padding-top: 9rem;
+
+
+        .container {
+            .secheader {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .mainContent {
+
+                grid-template-columns: 260px 1px 5px;
+                grid-template-rows: auto auto auto;
+                //column-gap: 10px;
+                //row-gap: 15px;
+            }
+        }
+    }
+}
