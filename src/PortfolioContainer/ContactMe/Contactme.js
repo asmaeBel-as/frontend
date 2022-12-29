@@ -45,7 +45,7 @@ export default function ContactMe(props) {
         message,
       };
       setBool(true);
-      const res = await axios.post(`/contact`, data);
+      const res = await axios.post(`https://belas-asmae-portfolio-api.onrender.com/contact`, data);
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
@@ -72,19 +72,19 @@ export default function ContactMe(props) {
           <h2 className="title">
             <Typical loop={Infinity} steps={["Get In Touch 📧", 1000]} />
           </h2>{" "}
-          <a href="https://web.facebook.com/?_rdc=1&_rdr">
+          <a href="https://web.facebook.com/demoisell.asmae/">
             <i className="fa fa-facebook-square" />
           </a>
           <a href="#">
             <i className="fa fa-google-plus-square" />
           </a>
-          <a href="https://www.instagram.com/instructor_ehizeex/">
+          <a href="https://www.instagram.com/bellissad_asmae/">
             <i className="fa fa-instagram" />
           </a>
-          <a href="https://www.youtube.com/channel/UCSSr5ZDFbilpZ592_ycoAwA">
+          <a href="https://www.youtube.com/channel/UCQW_cRp29PHBfz_7kld5FNA">
             <i className="fa fa-youtube-square" />
           </a>
-          <a href="https://twitter.com/Ehiedu_baba">
+          <a href="https://twitter.com/Asmae51483526">
             <i className="fa fa-twitter" />
           </a>
         </div>
